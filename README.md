@@ -5,7 +5,7 @@ WSB Roulette v0.1
 
 Tired of the market making no sense? Logical plays losing you money? Sir, this is a casino. Test your luck with some randomly generated options plays!
 
-![Screenshot](https://i.imgur.com/mWfyVnT.jpg)
+![Screenshot](https://i.imgur.com/QDtf4nf.png)
 
 Introduction
 ====
