@@ -5,6 +5,8 @@ WSB Roulette v0.1
 
 Tired of the market making no sense? Logical plays losing you money? Sir, this is a casino. Test your luck with some randomly generated options plays!
 
+![Screenshot](https://i.imgur.com/mWfyVnT.jpg)
+
 Introduction
 ====
 This is a simple script that scrapes live options data using the Yahoo Finance API. It takes a list of tickers, and generates random plays using current trading data.
