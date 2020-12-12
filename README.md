@@ -57,7 +57,6 @@ Example
 >python wsbroulette.py -t "TSLA,PLTR,GME,NIO" -b 50000 -e 2 -s 5
   
 This generates 4 options for TSLA, PLTR, GME, NIO with a total bankroll of up to $50,000. It will only use up to the next 2 expirations because FDs are life.
-
 The strike price will be in the range of +/- 5 strikes from the current underyling price.
 
 >python wsbroulette.py -t "TSLA,PLTR,GME,NIO" -b 50000 -f
