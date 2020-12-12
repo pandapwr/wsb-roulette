@@ -37,7 +37,7 @@ Install requirements with: pip install -r requirements.txt
 
 Usage
 =====
-python wsbroulette.py -t TICKERS -b BALANCE [-e EXPIRATION RANGE] [-s STRIKE_RANGE] [-d DISTRIBUTION]
+python wsbroulette.py -t TICKERS -b BALANCE [-e EXPIRATION RANGE] [-s STRIKE_RANGE] [-d DISTRIBUTION] [-f]
 
 Enter a list of tickers formatted as in the following example: "TSLA,PLTR,GME,NIO"
 
@@ -49,6 +49,8 @@ STRIKE_RANGE is optional and controls the range of strikes returned from the cur
 
 DISTRIBUTION is optional and controls the randomness of allocation of funds between the tickers (Lower is more random, Higher is more even, Default = 10)
 
+Add the -f flag if you want to engage FD mode! In FD mode, only the next 2 expiration dates are used. Options are also always OTM at 3-5 strikes out from underlying.
+
 Example
 ====
 
@@ -58,5 +60,10 @@ This generates 4 options for TSLA, PLTR, GME, NIO with a total bankroll of up to
 
 The strike price will be in the range of +/- 5 strikes from the current underyling price.
 
+>python wsbroulette.py -t "TSLA,PLTR,GME,NIO" -b 50000 -f
+
+FD MODE! Generate 4 options for TSLA, PLTR, GME, NIO with a bankroll of $50k. Options are OTM, expire within 2 weeks and are 3-5 strikes out.
+
 
 Happy gambling and I will not take responsbility for any money you may lose :)
+====
