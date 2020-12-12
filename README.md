@@ -48,9 +48,10 @@ STRIKE_RANGE is optional and controls the range of strikes returned from the cur
 
 DISTRIBUTION is optional and controls the randomness of allocation of funds between the tickers (Lower is more random, Higher is more even, Default = 10)
 
-Example Usage:
+Example
+====
 
-  python wsbroulette.py -t "TSLA,PLTR,GME,NIO" -b 50000 -e 2 -s 5
+>python wsbroulette.py -t "TSLA,PLTR,GME,NIO" -b 50000 -e 2 -s 5
   
 This generates 4 options for TSLA, PLTR, GME, NIO with a total bankroll of up to $50,000. It will only use up to the next 2 expirations because FDs are life.
 
