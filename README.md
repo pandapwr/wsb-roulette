@@ -37,7 +37,7 @@ Install requirements with: pip install -r requirements.txt
 
 Usage
 =====
-python wsbroulette.py -t TICKERS -b BALANCE [-e EXPIRATION RANGE] [-s STRIKE_RANGE] [-d DISTRIBUTION] [-f]
+python wsbroulette.py -t TICKERS -b BALANCE [-e EXPIRATION RANGE] [-s STRIKE_RANGE] [-d DISTRIBUTION] [-f] [-beargang] [-bullgang]
 
 Enter a list of tickers formatted as in the following example: "TSLA,PLTR,GME,NIO"
 
@@ -50,6 +50,8 @@ STRIKE_RANGE is optional and controls the range of strikes returned from the cur
 DISTRIBUTION is optional and controls the randomness of allocation of funds between the tickers (Lower is more random, Higher is more even, Default = 10)
 
 Add the -f flag if you want to engage FD mode! In FD mode, only the next 2 expiration dates are used. Options are also always OTM at 3-5 strikes out from underlying.
+
+Add either the -beargang or -bullgang flag if you want to only generate puts or calls, respectively
 
 Example
 ====
