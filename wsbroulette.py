@@ -19,6 +19,8 @@ ap.add_argument("-s","--strike_range", default=3, required=False, help="Strike R
 ap.add_argument("-b","--balance", required=True, help="Account Balance")
 ap.add_argument("-d","--distribution", default=10, required=False, help="Distribution of funds")
 ap.add_argument("-f","--fd", action="store_true", required=False, help="FD mode")
+ap.add_argument("-bullgang","--bullgang", action="store_true", required=False, help="BULL GANG")
+ap.add_argument("-beargang","--beargang", action="store_true", required=False, help="BEAR GANG")
 args = ap.parse_args()
 
 expiration_range = args.expiration_range
@@ -57,6 +59,11 @@ def find_nearest(array, value):
 def grab_options(ticker, cost):
     underlying = Stock(ticker)
     option = options[randint(0,1)]
+    
+    if args.bullgang == True:
+        option = "C"
+    if args.beargang == True:
+        option = "P"
     
     available_cash = round(account_balance * cost,2)
     
